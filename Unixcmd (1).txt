@@ -1,0 +1,192 @@
+back path
+cd ..
+
+current working directory
+ pwd
+ 
+create a directory or folder
+mkdir pythonca
+
+Inside folder
+cd python
+
+create a file
+cat > cities
+
+At a time all data display
+cat cities
+
+page by page dislplay
+more cities
+
+back       end q
+less cities
+
+Showing top 10 rows for the file
+head cities
+
+showing 5 rows
+head -n 5 cities
+
+
+head -5 cities
+
+head -50 cities
+head -20 cities
+
+showing down 20 rows
+tail -20 cities
+
+ Between formula - Tail -(n2-n1)+1
+E.G. 8 to 13
+
+tail-(13-8)+1 = 5+1 = 6 
+   
+head -13 cities|tail -6
+
+head -18 cities|tail -5
+
+head -18 cities|tail -2
+
+cat -cities
+
+cat -n cities
+   
+showing 17 line
+head -17 cities|tail -1
+
+head -3 cities|tail -1
+
+showing 3rd record and 7th record
+head -3 cities | tail -1 && head -7 cities|tail -1
+
+clear
+
+
+create duplicate file
+data override
+cat cities>cities1
+
+#cat f3txt
+
+appending record in cities1
+cat cities>>cities1
+
+
+grep -ni 'Dhuburi' cities
+
+cat cities1
+
+cities1 - cities2  and delete a cities1 file 
+mv cities1 cities2
+mv cities2 cities3
+
+crate a hidden file 
+mv cities .cities4
+
+pwd
+ls
+
+-l- Long lasting format.
+ls -1  
+
+showing total files
+la -la
+ls -la
+ls -sa
+ls -s
+ls -l
+clear
+ls
+ls -l
+
+showing hidden file
+ls -a
+
+ls -la
+ls -lrt
+
+history
+
+cat cities
+
+checking pattern
+fetch one recornd in the file 
+grep 'Akola' cities
+
+grep 'kolkata' cities
+grep 'Kolkata' cities
+grep 'Pune' cities
+
+which line number in pune city
+grep -n 'Pune' cities
+grep -n -i 'pune' cities
+
+not case sensitive
+grep -i 'akola' cities
+
+how many times getting a pune 
+grep -c 'pune' cities
+
+grep -c -i 'pune' cities
+history
+
+
+Showing blank lines
+grep '^$' cities
+
+e grep
+
+showing at a time multiple cities
+grep -e 'Akola' -e 'Pune' cities
+
+egrep 'Akola|Pune|Bokaro|Hazaribag' cities1
+
+grep Pune cities && grep Bokaro cities
+
+Showing hidden files 
+grep -r 'Pune' .*
+ 
+sed -n '4p' cities
+sed -n '3p' newfile
+  
+permanatly delete 
+sed -i '3d' newfile
+  
+crate a duplicate 
+sed -i '1p' newfile
+   
+Replacement
+sed  -i 's/Pune/Mumbai/g' newfile
+
+tempraraly delete blankspaces
+ sed '/^$/~d' newfile
+ 
+ sed '3,5d' newfile
+ 
+ 1st and last row delete 
+ sed '1d;$d' newfile
+ 
+ 2nd and 4th row delete
+ sed '2d;4d' newfile
+ 
+================================================ 
+ root@DESKTOP-UIL6L6A:~/linux# ls -l
+total 16
+
+read/write  group  others permission   memory size   
+-rw-r--r-- 1 root root 6900 Feb 28 16:01 cities
+-rw-r--r-- 1 root root    0 Feb 28 15:51 cities5
+-rw-r--r-- 1 root root   43 Feb 28 16:23 newfile
+root@DESKTOP-UIL6L6A:~/linux#
+
+r - 4
+w - 2
+666
+ 
+===========================================================
+
+
+wc -l lemmon
+wc -w lemmon
+wc -c lemmon 
